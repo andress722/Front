@@ -1,0 +1,115 @@
+{
+  "textos": [
+    {
+      "id": 1,
+      "nome": "Autor 1",
+      "titulo": "Entendendo o Autismo",
+      "texto": "O autismo é um distúrbio do desenvolvimento neurológico que afeta a forma como uma pessoa se comunica, interage e percebe o mundo ao seu redor. Pessoas com autismo podem ter dificuldades na comunicação verbal e não verbal, padrões de comportamento repetitivos e interesses restritos. É importante oferecer apoio e compreensão às pessoas com autismo para que possam alcançar todo o seu potencial.",
+      "data_criacao": "2023-08-10",
+      "imagem": "https://source.unsplash.com/200x150/?autism",
+      "categoria": "CBD"
+    },
+    {
+      "id": 2,
+      "nome": "Autor 2",
+      "titulo": "Abordagens Terapêuticas",
+      "texto": "Existem várias abordagens terapêuticas que podem ser úteis para pessoas com autismo. Terapias comportamentais, como ABA (Análise do Comportamento Aplicada), podem ajudar a desenvolver habilidades sociais e de comunicação. Terapias ocupacionais e de fala também podem ser benéficas. Cada pessoa é única, e o tratamento deve ser adaptado às suas necessidades específicas.",
+      "data_criacao": "2023-08-11",
+      "imagem": "https://source.unsplash.com/200x150/?autism",
+      "categoria": "Tratamento"
+    },
+    {
+      "id": 3,
+      "nome": "Autor 3",
+      "titulo": "Autismo na Infância",
+      "texto": "O diagnóstico precoce e a intervenção são fundamentais para crianças com autismo. Os pais e cuidadores podem observar sinais como a falta de resposta ao nome, atrasos na linguagem e dificuldades de interação social. Quanto mais cedo as crianças receberem suporte adequado, melhores serão suas chances de desenvolver habilidades importantes.",
+      "data_criacao": "2023-08-12",
+      "imagem": "https://source.unsplash.com/200x150/?autism",
+      "categoria": "CBD"
+    },
+    {
+      "id": 4,
+      "nome": "Autor 4",
+      "titulo": "Desafios e Conquistas",
+      "texto": "Embora as pessoas com autismo enfrentem desafios em áreas como interação social e comunicação, elas também têm muitas conquistas e habilidades únicas. Muitas pessoas com autismo têm talentos especiais em campos como música, matemática e arte. É importante focar nas habilidades e interesses individuais de cada pessoa.",
+      "data_criacao": "2023-08-13",
+      "imagem": "https://source.unsplash.com/200x150/?autism",
+      "categoria": "Autismo"
+    },
+    {
+      "id": 5,
+      "nome": "Autor 5",
+      "titulo": "Promovendo a Inclusão",
+      "texto": "Promover a inclusão de pessoas com autismo na sociedade é essencial. Isso envolve criar ambientes acessíveis e compreensíveis, oferecer oportunidades de aprendizado e emprego, e educar a comunidade sobre o autismo. A inclusão não apenas beneficia as pessoas com autismo, mas enriquece a sociedade como um todo.",
+      "data_criacao": "2023-08-14",
+      "imagem": "https://source.unsplash.com/200x150/?autism",
+      "categoria": "Autismo"
+    },
+    {
+      "id": 6,
+      "nome": "Autor 6",
+      "titulo": "Sintomas do Autismo",
+      "texto": "Os sintomas do autismo podem variar amplamente, mas geralmente envolvem dificuldades na comunicação e interação social. Pessoas com autismo podem ter padrões de comportamento repetitivos e interesses restritos. É importante lembrar que cada pessoa com autismo é única e tem suas próprias características e desafios.",
+      "data_criacao": "2023-08-15",
+      "imagem": "https://source.unsplash.com/200x150/?autism",
+      "categoria": "CBD"
+    },
+    {
+      "id": 7,
+      "nome": "Autor 7",
+      "titulo": "Autismo na Adolescência",
+      "texto": "A adolescência pode trazer desafios adicionais para pessoas com autismo, à medida que lidam com mudanças físicas, emocionais e sociais. É importante oferecer apoio e orientação durante esse período. Intervenções terapêuticas e educacionais continuam sendo essenciais para ajudar os adolescentes com autismo a alcançar seu potencial.",
+      "data_criacao": "2023-08-16",
+      "imagem": "https://source.unsplash.com/200x150/?autism",
+      "categoria": "CBD"
+    },
+    {
+      "id": 8,
+      "nome": "Autor 8",
+      "titulo": "Mitossobre o Autismo",
+      "texto": "Existem muitos equívocos e mitos sobre o autismo. É importante esclarecer informações incorretas e fornecer educação baseada em evidências. Por exemplo, o autismo não é causado por vacinas, e as pessoas com autismo têm uma ampla gama de habilidades e potencial. A conscientização e a compreensão são fundamentais.",
+      "data_criacao": "2023-08-17",
+      "imagem": "https://source.unsplash.com/200x150/?autism",
+      "categoria": "Tratamento"
+    },
+    {
+      "id": 9,
+      "nome": "Autor 9",
+      "titulo": "Inclusão no Ambiente de Trabalho",
+      "texto": "Promover a inclusão de pessoas com autismo no ambiente de trabalho é benéfico para as empresas e os funcionários. Pessoas com autismo podem trazer perspectivas únicas e habilidades valiosas para o local de trabalho. A adaptação do ambiente e a conscientização dos colegas são importantes para criar um ambiente inclusivo e acolhedor.",
+      "data_criacao": "2023-08-18",
+      "imagem": "https://source.unsplash.com/200x150/?autism",
+      "categoria": "Tratamento"
+    },
+    {
+      "id": 10,
+      "nome": "Autor 9",
+      "titulo": "Inclusão no Ambiente de Trabalho",
+      "texto": "Promover a inclusão de pessoas com autismo no ambiente de trabalho é benéfico para as empresas e os funcionários. Pessoas com autismo podem trazer perspectivas únicas e habilidades valiosas para o local de trabalho. A adaptação do ambiente e a conscientização dos colegas são importantes para criar um ambiente inclusivo e acolhedor.",
+      "data_criacao": "2023-08-18",
+      "imagem": "https://source.unsplash.com/200x150/?autism",
+      "categoria": "Tratamento"
+    },
+    {
+      "id": 11,
+      "nome": "Autor 9",
+      "titulo": "Inclusão no Ambiente de Trabalho",
+      "texto": "Promover a inclusão de pessoas com autismo no ambiente de trabalho é benéfico para as empresas e os funcionários. Pessoas com autismo podem trazer perspectivas únicas e habilidades valiosas para o local de trabalho. A adaptação do ambiente e a conscientização dos colegas são importantes para criar um ambiente inclusivo e acolhedor.",
+      "data_criacao": "2023-08-18",
+      "imagem": "https://source.unsplash.com/200x150/?autism",
+      "categoria": "Tratamento"
+    },
+    {
+      "id": 12,
+      "nome": "Autor 9",
+      "titulo": "Inclusão no Ambiente de Trabalho",
+      "texto": "Promover a inclusão de pessoas com autismo no ambiente de trabalho é benéfico para as empresas e os funcionários. Pessoas com autismo podem trazer perspectivas únicas e habilidades valiosas para o local de trabalho. A adaptação do ambiente e a conscientização dos colegas são importantes para criar um ambiente inclusivo e acolhedor.",
+      "data_criacao": "2023-08-18",
+      "imagem": "https://source.unsplash.com/200x150/?autism",
+      "categoria": "Tratamento"
+    }
+  ],
+  "meta": {
+    "total": 12
+  }
+}

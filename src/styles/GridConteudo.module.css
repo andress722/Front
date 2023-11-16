@@ -1,0 +1,72 @@
+/* GridConteudo.module.css */
+
+/* Estilo para a grade de conteúdo */
+.g2 {
+  justify-content: center;
+  width: 100%;
+}
+
+/* Estilo para cada coluna do card */
+.col {
+  margin-bottom: 20px;
+}
+
+/* Estilo para o card em si */
+.card {
+  height: 100%;
+  border: 1px solid #ddd;
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: scale(1.02);
+}
+
+/* Estilo para a imagem do card */
+.card-img-top {
+  max-height: 300px;
+  object-fit: cover;
+}
+
+/* Estilo para o título do card */
+.card-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+/* Estilo para o texto do card */
+.card-text {
+  max-height: 100px;
+  overflow: hidden;
+}
+
+/* Estilo para a paginação */
+.pagination {
+  justify-content: center;
+  margin-top: 20px;
+}
+
+/* Estilo para os itens de páginação */
+.pagination .page-item .page-link {
+  color: #333;
+  background-color: transparent;
+  border: 1px solid #ddd;
+  margin: 0 3px;
+}
+
+.pagination .page-item .page-link:hover {
+  background-color: #eee;
+}
+
+.pagination .page-item.active .page-link {
+  background-color: #007bff;
+  border-color: #007bff;
+  color: #fff;
+}
+
+.pagination .page-item.disabled .page-link {
+  pointer-events: none;
+  background-color: #f8f9fa;
+  border-color: #ddd;
+  color: #888;
+}

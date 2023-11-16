@@ -1,0 +1,45 @@
+/* SeuComponente.module.css */
+
+.container {
+    position: relative;
+    overflow: hidden; /* Para ocultar o desfoque fora do contêiner */
+  }
+  
+  .highlightedText {
+    margin-left: -5px;
+    font-size: 25px;
+    font-family: ui-monospace;
+    font-style: oblique;
+    position: relative;
+    margin-top: -9px !important;
+    font-weight: bold;
+    background-color: transparent;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  
+  .highlightedText h1,
+  .highlightedText p {
+    
+    color: #333; /* Cor do texto */
+    position: relative;
+    z-index: 1; /* Coloca o texto destacado na frente da máscara de desfoque */
+  }
+  
+  .highlightedText::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 150px;
+    background: linear-gradient(to bottom, transparent, #676cab1a);
+    z-index: 0;
+  }
+  .texts{
+    display: flex;
+    flex-direction: column;
+    margin-top: -81px;
+    margin-left: 24px;
+  }
+  
+  

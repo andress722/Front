@@ -1,0 +1,48 @@
+.text-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+  
+  .card {
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    transition: box-shadow 0.3s, transform 0.3s;
+  }
+  
+  .card:hover {
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transform: translateY(-4px);
+    cursor: pointer;
+  }
+  
+  .subtitulo {
+    font-weight: bold;
+  }
+  
+  .texto {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    line-height: 1.5;
+  }
+  
+  .card:hover h3,
+  .card:hover .subtitulo {
+    text-decoration: underline;
+  }
+  
+  /* Dentro de um arquivo CSS ou na tag <style> do seu componente */
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.card {
+  flex: 1 0 25%; /* Para exibir 4 cards por linha */
+  max-width: 25%; /* Mesmo valor do flex para garantir a mesma largura */
+}
