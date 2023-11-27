@@ -3,6 +3,8 @@ import Link from 'next/link';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import axios from 'axios';
 import Script from 'next/script';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 interface HeaderProps {
 	selectedCategory: string;
@@ -14,10 +16,9 @@ const Navbar: React.FC<HeaderProps> = () => {
 
   useEffect(() => {
     axios
-      .get('http://localhost:3001/todos')
+      .get('https://apiautism-5571b7254db2.herokuapp.com/todos')
       .then((response) => {
         setCategories(response.data.rows);
-        console.log(categories);
       })
       .catch((error) => {
         console.error('Erro ao buscar categorias:', error);

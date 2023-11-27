@@ -21,7 +21,7 @@ const TextDetailsPage = ({ text }: { text: Text | null }) => {
       // Convert text?.id to a string
       const idString = text?.id?.toString();
 
-      fetch(`http://localhost:3001/update-access-count/${idString}`, {
+      fetch(`https://apiautism-5571b7254db2.herokuapp.com/${idString}`, {
         method: 'POST',
         body: idString,
       });
@@ -42,7 +42,7 @@ const TextDetailsPage = ({ text }: { text: Text | null }) => {
     <div className={styles.container}>
       <div className={styles.textDetails}>
         <h1 className={styles.title}>{text.titulo}</h1>
-        <img src={`http://localhost:3001/images/${text.imagem}`} alt='' className={styles.image} />
+        <img src={`https://apiautism-5571b7254db2.herokuapp.com/images/${text.imagem}`} alt='' className={styles.image} />
         <p className={styles.text}>{text.texto}</p>
         <p className={styles.category}>Categoria: {text.categoria}</p>
       </div>

@@ -20,7 +20,7 @@ const SignupForm: React.FC = () => {
 
     try {
       // Enviar o e-mail para a API Express
-      const response = await fetch('http://localhost:3001/registro/', {
+      const response = await fetch('https://apiautism-5571b7254db2.herokuapp.com/registro/', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

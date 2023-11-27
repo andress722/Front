@@ -11,7 +11,7 @@ const Conteudos: React.FC = () => {
   const apiUrl = `https://apiautism-5571b7254db2.herokuapp.com/?page=${currentPage}&pageSize=${itemsPerPage}&sortOrder=${sortOrder}&sortBy=${sortBy}`;
 
   const { data, loading, error } = useApi(apiUrl);
-
+  console.log(data)
   const handlePageChange = (pageNumber: number) => {
     setCurrentPage(pageNumber);
   };
