@@ -4,19 +4,20 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import axios from 'axios';
 import Script from 'next/script';
 
+interface HeaderProps {
+	selectedCategory: string;
+	onCategorySelect: (category: string) => void;
+  }
 
-
-const Navbar: React.FC = ({ selectedCategory, onCategorySelect }) => {
-
-  const [categories, setCategories] = useState([]);
+const Navbar: React.FC<HeaderProps> = () => {
+  const [categories, setCategories] = useState<any[]>([]);
 
   useEffect(() => {
-    // Fazer uma chamada à API para buscar as categorias disponíveis
     axios
       .get('http://localhost:3001/todos')
       .then((response) => {
         setCategories(response.data.rows);
-		console.log(categories)
+        console.log(categories);
       })
       .catch((error) => {
         console.error('Erro ao buscar categorias:', error);
@@ -35,34 +36,34 @@ const Navbar: React.FC = ({ selectedCategory, onCategorySelect }) => {
 
 		<nav className="navbar navbar-expand-lg ftco_navbar ftco-navbar-light" style={{backgroundColor: '#7265ef!important'}} id="ftco-navbar">
 	    <div className="container">
-	      <a className="navbar-brand" href="/"><img style={{width: '120px'}} src="img/kisspng-world-autism-awareness-day-autistic-spectrum-disor-autism-ribbon-5aae3cbcabf615.2430117815213682527044.png" alt="" /></a>
+	      <Link className="navbar-brand" href="/"><img style={{width: '120px'}} src="img/kisspng-world-autism-awareness-day-autistic-spectrum-disor-autism-ribbon-5aae3cbcabf615.2430117815213682527044.png" alt="" /></Link>
 	      <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
 	        <span className="fa fa-bars"></span> Menu
 	      </button>
 
 	      <div className="collapse navbar-collapse" id="ftco-nav" style={{backgroundColor: '#7265ef!important'}} >
 	        <ul className="navbar-nav ml-auto" style={{backgroundColor: '#7265ef!important'}}>
-	        	<li className="nav-item active"><a href="/" className="nav-link">Home</a></li>
+	        	<li className="nav-item active"><Link href="/" className="nav-link">Home</Link></li>
 	        	<li className="nav-item dropdown">
-              <a className="nav-link dropdown-toggle" href="" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Page</a>
+              <Link className="nav-link dropdown-toggle" href="" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Page</Link>
               <div className="dropdown-menu" aria-labelledby="dropdown04" style={{backgroundColor: '#453d97!important'}}>
 					
-				<a className="dropdown-item" style={{color: 'white', cursor: 'pointer'}} href="/conteudos">Todos</a>
+				<Link className="dropdown-item" style={{color: 'white', cursor: 'pointer'}} href="/conteudos">Todos</Link>
 
 				{Array.from(new Set(categories.map((category) => category.categoria))).map((uniqueCategory) => (
                    
-				   <Link legacyBehavior href={`/categoria/${uniqueCategory}`}>
-				   <a className="dropdown-item" style={{ color: 'white', cursor: 'pointer' }}>
+				   <Link legacyBehavior key={uniqueCategory} href={`/categoria/${uniqueCategory}`}>
+				   <span className="dropdown-item" style={{ color: 'white', cursor: 'pointer' }}>
 					 {uniqueCategory}
-				   </a>
+				   </span>
 				 </Link>
                   ))}
 
 
               </div>
             </li>
-	        	<li className="nav-item"><a href="/sobre" className="nav-link">Sobre</a></li>
-	          <li className="nav-item cta" style={{maxWidth: '100px'}}><a href="/contato" className="nav-link">Contato</a></li>
+	        	<li className="nav-item"><Link href="/sobre" className="nav-link">Sobre</Link></li>
+	          <li className="nav-item cta" style={{maxWidth: '100px'}}><Link href="/contato" className="nav-link">Contato</Link></li>
 	        </ul>
 	      </div>
 	    </div>

@@ -43,6 +43,7 @@
   },
   "devDependencies": {
     "@types/bootstrap": "^5.2.8",
-    "@types/jquery": "^3.5.26"
+    "@types/jquery": "^3.5.26",
+    "@types/nodemailer": "^6.4.14"
   }
 }

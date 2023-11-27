@@ -20,19 +20,20 @@ const SeuComponente: React.FC<PropType> = (props) => {
     dragFree: true,
   });
 
-  const applyStyleBasedOnBackground = () => {
-    slides.forEach((_, index) => {
-      const imgElement = document.getElementById(`backgroundImage-${index}`);
+  const applyStyleBasedOnBackground = async () => {
+    slides.forEach(async (_, index) => {
+      const imgElement = document.getElementById(`backgroundImage-${index}`) as HTMLImageElement | null;
+  
       console.log(imgElement);
       if (imgElement) {
-        const imagePath = "image/" + imgElement.src; // Concatena a rota base com o nome da imagem
-        const brightness = getBrightnessFromImage(imagePath);
+        const imagePath = "image/" + imgElement.src;
+        const brightness = await getBrightnessFromImage(imagePath);
   
         const threshold = 128;
   
         const textsContainer = document.querySelector(`#texts-${index}`);
         if (textsContainer) {
-          if (brightness < threshold) {
+          if (typeof brightness === 'number' && brightness < threshold) {
             textsContainer.classList.add('text-light-background');
           } else {
             textsContainer.classList.add('text-dark-background');
@@ -41,6 +42,8 @@ const SeuComponente: React.FC<PropType> = (props) => {
       }
     });
   };
+  
+  
   const getBrightnessFromImage = (imageUrl: string) => {
     const canvas = document.createElement('canvas');
     const context = canvas.getContext('2d');
@@ -106,7 +109,7 @@ const SeuComponente: React.FC<PropType> = (props) => {
                 <span>{index + 1}</span>
               </div>
               <img
-                crossOrigin="Anonymous"
+              
                 id={`backgroundImage-${index}`}
                 className={`embla__slide__img ${styles.imgStyle}`}
                 src={imageByIndex(index)} // Use a função imageByIndex para obter a URL da imagem

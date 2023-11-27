@@ -5,6 +5,16 @@ interface TextDetailsProps {
   text: Text;
 }
 
+interface Text {
+  id: number;
+  nome: string;
+  imagem: string;
+  titulo: string;
+  texto: string;
+  data_criacao: string;
+  categoria: string;
+}
+
 const TextDetails: React.FC<TextDetailsProps> = ({ text }) => {
   const router = useRouter();
 

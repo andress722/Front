@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useRouter } from 'next/router';
 import axios from 'axios';
-import styles from '../../styles/TextDetail.module.css'
+import styles from '../../styles/TextDetail.module.css';
 
 interface Text {
   id: number;
@@ -14,15 +14,20 @@ interface Text {
 }
 
 const TextDetailsPage = ({ text }: { text: Text | null }) => {
-  useEffect(()=> {
-    function handleSend(){
-      console.log(text?.id)
-      fetch(`http://localhost:3001/update-access-count/${text?.id}`, {
+  useEffect(() => {
+    function handleSend() {
+      console.log(text?.id);
+
+      // Convert text?.id to a string
+      const idString = text?.id?.toString();
+
+      fetch(`http://localhost:3001/update-access-count/${idString}`, {
         method: 'POST',
-        body: text?.id,})
+        body: idString,
+      });
     }
-    handleSend()
-  },[])
+    handleSend();
+  }, [text]);
 
   if (!text) {
     // Texto não encontrado, exiba uma mensagem de erro
@@ -45,10 +50,10 @@ const TextDetailsPage = ({ text }: { text: Text | null }) => {
   );
 };
 
-export async function getServerSideProps(context) {
+export async function getServerSideProps(context: any) {
   const { id } = context.query;
   try {
-    const response = await axios.get(`http://localhost:3001/todos/${id}`);
+    const response = await axios.get(`https://apiautism-5571b7254db2.herokuapp.com/todos/${id}`);
     const text = response.data;
 
     return {

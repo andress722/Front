@@ -9,7 +9,7 @@ const AdminLogin: React.FC = () => {
     e.preventDefault();
 
     try {
-      const response = await fetch(`http://localhost:3001/login`, {
+      const response = await fetch(`https://apiautism-5571b7254db2.herokuapp.com/login`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -26,7 +26,7 @@ const AdminLogin: React.FC = () => {
         console.log(token)
         localStorage.setItem('token', token)
         const expirationTime = new Date().getTime() + 60 * 60 * 1000;
-        localStorage.setItem('tokenExpiration', expirationTime);
+        localStorage.setItem('tokenExpiration', String(expirationTime));
         window.location.href = '/admin'
       } else if (data.message === 'Credenciais inválidas') {
         setError('Login errado');

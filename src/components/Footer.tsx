@@ -24,7 +24,7 @@ const Footer: React.FC = () => {
 
     try {
       // Enviar o e-mail para a rota no servidor usando axios
-      await axios.post(`http://localhost:3001/registro/${ email }`);
+      await axios.post(`https://apiautism-5571b7254db2.herokuapp.com/registro/${ email }`);
       
       // Exemplo de mensagem de sucesso após o envio bem-sucedido
       alert('Inscrição bem-sucedida!');

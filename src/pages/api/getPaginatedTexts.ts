@@ -5,7 +5,7 @@ const textsPerPage = 4;
 
 const getPaginatedTexts = async (page: number) => {
   try {
-    const response = await axios.get('http://localhost:3001/textos');
+    const response = await axios.get('https://apiautism-5571b7254db2.herokuapp.com/textos');
     const texts = response.data;
 
     const startIndex = (page - 1) * textsPerPage;

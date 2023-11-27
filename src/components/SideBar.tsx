@@ -1,9 +1,13 @@
 // components/Sidebar.tsx
-import React, { useState } from 'react';
+import React from 'react';
 import Link from 'next/link';
 import styled from '../styles/styles.module.scss';
 
-const Sidebar: React.FC = ({ handleComponentChange }) => {
+interface SidebarProps {
+  handleComponentChange: (component: string) => void;
+}
+
+const Sidebar: React.FC<SidebarProps> = ({ handleComponentChange }) => {
   return (
     <nav id="sidebar" className={styled.bgSideFull}>
       <div className="p-4">

@@ -10,6 +10,7 @@ interface Text {
   texto: string;
   data_criacao: string;
   imagem: string;
+  categoria: string;
 }
 
 interface TextGridProps {
@@ -46,7 +47,7 @@ console.log(categoria)
               <a>
                 <div className={styles.cards}>
                   <img
-                    src={`http://localhost:3001/images/${text.imagem}`}
+                    src={`https://apiautism-5571b7254db2.herokuapp.com/images/${text.imagem}`}
                     alt={`Imagem para ${text.titulo}`}
                     className="card-img-top"
                   />

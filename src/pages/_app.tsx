@@ -11,6 +11,10 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'jquery/dist/jquery.min.js';
 import '../styles/globals.css';
 
+interface HeaderProps {
+  selectedCategory: string;
+  onCategorySelect: (category: string) => void;
+}
 
 const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
   const [selectedCategory, setSelectedCategory] = useState('');

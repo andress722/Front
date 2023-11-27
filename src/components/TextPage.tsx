@@ -1,5 +1,5 @@
 // components/TextPage.tsx
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import TextGrid from './TextGrid';
 import getPaginatedTexts from '../pages/api/getPaginatedTexts';
@@ -17,8 +17,17 @@ interface Props {
 }
 
 const TextPage: React.FC<Props> = ({ currentPage }) => {
-  const texts = getPaginatedTexts(currentPage);
+  const [texts, setTexts] = useState<Text[]>([]);
   const router = useRouter();
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const data = await getPaginatedTexts(currentPage);
+      setTexts(data);
+    };
+
+    fetchData();
+  }, [currentPage]);
 
   // Função para navegar para a página anterior
   const goToPreviousPage = () => {
@@ -38,7 +47,7 @@ const TextPage: React.FC<Props> = ({ currentPage }) => {
 
   return (
     <>
-      <TextGrid texts={texts} currentPage={currentPage} totalPageCount={totalPageCount} />
+      <TextGrid />
       <nav aria-label="Page navigation">
         <ul className="pagination justify-content-center">
           <li className={`page-item ${currentPage === 1 ? 'disabled' : ''}`}>

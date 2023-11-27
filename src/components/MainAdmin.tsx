@@ -3,11 +3,7 @@ import React from 'react';
 import styled from '../styles/styles.module.scss';
 
 
-interface Props {
-  currentPage: number;
-}
-
-const Home: React.FC<Props> = () => {
+const Home: React.FC = () => {
 
     
   return (

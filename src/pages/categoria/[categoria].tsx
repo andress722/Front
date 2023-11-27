@@ -12,12 +12,12 @@ const CategoryPage = () => {
   const [currentPage, setCurrentPage] = useState(1);
 
   // Atualize a URL da API para a nova rota
-  const apiUrl = `http://localhost:3001/categorias/${categoria}?page=${currentPage}&pageSize=${itemsPerPage}`;
+  const apiUrl = `https://apiautism-5571b7254db2.herokuapp.com/categorias/${categoria}?page=${currentPage}&pageSize=${itemsPerPage}`;
 
   const { data, loading, error } = useApi(apiUrl);
   console.log(data);
 
-  const handlePageChange = (pageNumber) => {
+  const handlePageChange = (pageNumber: number) => {
     setCurrentPage(pageNumber);
   };
 

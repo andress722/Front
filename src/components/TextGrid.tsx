@@ -12,7 +12,7 @@ const TextSlider: React.FC = () => {
   useEffect(() => {
     const fetchTexts = async () => {
       try {
-        const response = await fetch('http://localhost:3001/todos');
+        const response = await fetch('https://apiautism-5571b7254db2.herokuapp.com/todos');
         if (!response.ok) {
           throw new Error('Erro ao carregar textos.');
         }

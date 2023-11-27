@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import useApi from '../hooks/useApi';
 import GridConteudo from '../components/GridConteudo';
-import { Pagination } from 'react-bootstrap';
-
 
 const Conteudos: React.FC = () => {
   const itemsPerPage = 6;
@@ -10,7 +8,7 @@ const Conteudos: React.FC = () => {
   const [sortOrder, setSortOrder] = useState('DESC');
   const [sortBy, setSortBy] = useState('data_criacao');
 
-  const apiUrl = `http://localhost:3001/?page=${currentPage}&pageSize=${itemsPerPage}&sortOrder=${sortOrder}&sortBy=${sortBy}`;
+  const apiUrl = `https://apiautism-5571b7254db2.herokuapp.com/?page=${currentPage}&pageSize=${itemsPerPage}&sortOrder=${sortOrder}&sortBy=${sortBy}`;
 
   const { data, loading, error } = useApi(apiUrl);
 
@@ -19,11 +17,9 @@ const Conteudos: React.FC = () => {
   };
 
   const handleSortChange = (column: string) => {
-    // Se a coluna for a mesma, inverte o sentido da ordenação
     if (sortBy === column) {
       setSortOrder((prevSortOrder) => (prevSortOrder === 'asc' ? 'desc' : 'asc'));
     } else {
-      // Se for uma nova coluna, define a coluna e o sentido padrão (descendente)
       setSortBy(column);
       setSortOrder('desc');
     }
@@ -33,7 +29,6 @@ const Conteudos: React.FC = () => {
     <div className="container-fluid" style={{ marginTop: '20px' }}>
       <h1 className="mb-4">Conteúdos</h1>
 
-      {/* Passe data diretamente para o componente GridConteudo */}
       <GridConteudo
         data={data}
         onPageChange={handlePageChange}

@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import axios from 'axios';
 
 interface ApiResponse {
-  data: any; // ajuste o tipo de acordo com a resposta da API
+  data: any; // Adjust the type according to the API response
   error: Error | null;
   loading: boolean;
 }
@@ -18,7 +18,8 @@ const useApi = (url: string): ApiResponse => {
         const response = await axios.get(url);
         setData(response.data);
         setError(null);
-      } catch (error) {
+      } catch (error: any) {
+        // Explicitly specify the type for setError
         setError(error);
       } finally {
         setLoading(false);

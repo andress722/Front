@@ -15,7 +15,7 @@ const Home: React.FC<Props> = ({ currentPage }) => {
     async function updateAccessCount() {
       try {
         // Construa a URL completa do ponto de extremidade.
-        const apiUrl = 'http://localhost:3001/update-access-count';
+        const apiUrl = 'https://apiautism-5571b7254db2.herokuapp.com/update-access-count';
     
         // Faça uma solicitação POST para o ponto de extremidade.
         const response = await fetch(apiUrl, {
