@@ -20,9 +20,7 @@ useEffect(() => {
     
   
       <Header selectedCategory={selectedCategory} onCategorySelect={setSelectedCategory} />
-      <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"/>
-      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"/>
-      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"/>
+      
           <div style={{ minHeight: 'calc(100vh - 104px)', display: 'flex', flexDirection: 'column' }}>
             <Component {...pageProps} selectedCategory={selectedCategory} />
           </div>

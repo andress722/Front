@@ -1,11 +1,7 @@
-// GridConteudo.js
-
-import React, {useState} from 'react';
-
+import React, { useState } from 'react';
 import Link from 'next/link';
 import { Pagination } from 'react-bootstrap';
-import styles from '../styles/styles.module.scss'
-
+import styles from '../styles/styles.module.scss';
 
 interface Text {
   id: number;
@@ -14,10 +10,8 @@ interface Text {
   texto: string;
   data_criacao: string;
   imagem: string;
-  categoria: string
+  categoria: string;
 }
-
-
 
 interface TextGridProps {
   data: {
@@ -30,31 +24,25 @@ interface TextGridProps {
   sortBy: string;
 }
 
-
-
 const GridConteudo: React.FC<TextGridProps> = ({ data, onPageChange, onSortChange, sortOrder, sortBy }) => {
-  if (data === null) {
-    return null;
-  }
-
   const [currentPage, setCurrentPage] = useState(0);
   const itemsPerPage = 6;
 
   if (data === null) {
     return null; // Não renderiza nada se data for null
   }
+
   const handlePageChange = (pageNumber: number) => {
     onPageChange(pageNumber);
     setCurrentPage(pageNumber); // Atualiza o estado local também
   };
+
   const { rows, count } = data;
   const totalPages = Math.ceil(count / itemsPerPage);
   const pageNumbers = Array.from({ length: totalPages }, (_, index) => index + 1);
- 
+
   return (
-   
-      <div>
-        
+    <div>
       <div className={styles.body}>
         {rows.map((text) => (
           <div key={text.id} className={styles.grid}>
@@ -68,7 +56,7 @@ const GridConteudo: React.FC<TextGridProps> = ({ data, onPageChange, onSortChang
                   />
                   <div className={styles.cardBody}>
                     <h5 className="card-title">{text.titulo}</h5>
-                    <p className={styles.cardText} style={{overflow: 'hidden' }}>
+                    <p className={styles.cardText} style={{ overflow: 'hidden' }}>
                       {text.texto}
                     </p>
                   </div>
@@ -91,9 +79,7 @@ const GridConteudo: React.FC<TextGridProps> = ({ data, onPageChange, onSortChang
           </Pagination.Item>
         ))}
       </Pagination>
-    
-      </div>
-    
+    </div>
   );
 };
 
