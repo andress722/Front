@@ -70,7 +70,59 @@ const ContactForm = () => {
                   onChange={handleChange}
                 />
               </div>
-              {/* ... */}
+              <div className="mb-3">
+            <label htmlFor="email" className="form-label">
+              Email
+            </label>
+            <input
+              type="email"
+              className={`form-control ${isSubmitting ? 'disabled' : ''}`}
+              id="email"
+              name="email"
+              placeholder="seu-email@example.com"
+              required
+              value={formData.email}
+              onChange={handleChange}
+            />
+          </div>
+          <div className="mb-3">
+            <label htmlFor="assunto" className="form-label">
+              Assunto
+            </label>
+            <input
+              type="text"
+              className={`form-control ${isSubmitting ? 'disabled' : ''}`}
+              id="assunto"
+              name="assunto"
+              placeholder="Assunto do e-mail"
+              required
+              value={formData.assunto}
+              onChange={handleChange}
+            />
+          </div>
+          <div className="mb-3">
+            <label htmlFor="texto" className="form-label">
+              Texto
+            </label>
+            <textarea
+              className={`form-control ${isSubmitting ? 'disabled' : ''}`}
+              id="texto"
+              name="texto"
+              rows="4"
+              placeholder="Digite sua mensagem aqui"
+              required
+              value={formData.texto}
+              onChange={handleChange}
+            />
+          </div>
+          <button
+            type="submit"
+            className="btn btn-primary"
+            disabled={isSubmitting}
+          >
+            {isSubmitting ? 'Enviando...' : 'Enviar'}
+          </button>
+         
             </form>
           )}
         </div>
